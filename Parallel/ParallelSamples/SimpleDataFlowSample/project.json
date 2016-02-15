@@ -1,0 +1,28 @@
+﻿{
+  "version": "1.0.0-*",
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+
+  "commands": {
+    "SimpleDataFlowSample": "SimpleDataFlowSample"
+  },
+
+  "dependencies": {
+    "NETStandard.Library": "1.0.0-*",
+    "System.Threading.Tasks.Dataflow": "4.6.0-*"
+  },
+
+  "frameworks": {
+    "net46": {
+      "frameworkAssemblies": {
+        "System.Runtime": "",
+        "System.Threading.Tasks": ""
+      }
+    },
+    "dnxcore50": {
+      "dependencies": {
+      }
+    }
+  }
+}
