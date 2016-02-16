@@ -66,9 +66,27 @@ namespace ParallelDemo
             // BreakingOutOfLoops();
             // UseCancellationToken();
 
-            BreakingOutOfLoopsWithExceptions();
+            // BreakingOutOfLoopsWithExceptions();
+
+            ParallelInvoke();
 
 
+        }
+
+        private static void ParallelInvoke()
+        {
+            Parallel.Invoke(Foo, Bar, Foo, Foo);
+            Console.WriteLine($"{nameof(ParallelInvoke)} completed");
+        }
+
+        public static void Foo()
+        {
+            ShowTaskInfo(nameof(Foo));
+        }
+
+        public static void Bar()
+        {
+            ShowTaskInfo(nameof(Bar));
         }
 
         private static void UseCancellationToken()
